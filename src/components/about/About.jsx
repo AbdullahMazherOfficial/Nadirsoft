@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import CTA from '../home/CTA';
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Link from 'next/link';
 /**
  * Modern Stat Card Component
  * Fades in and slides up on scroll.
@@ -85,7 +86,7 @@ function About() {
     return (
         <section
             ref={ref}
-            className="w-full flex justify-center px-6 py-24 md:py-32 bg-slate-50/50"
+            className="w-full flex justify-center px-6 py-24 md:py-32 bg-white"
         >
             <motion.div
                 className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-[1fr_auto] gap-16 md:gap-24 items-center"
@@ -134,9 +135,11 @@ function About() {
                     </motion.div>
 
                     {/* New CTA with correct prop handling */}
-                    <motion.div variants={itemVariants}>
-                        <CTA title="About Us" icon={ArrowRight} />
-                    </motion.div>
+                    <Link href="/about">
+                        <motion.div variants={itemVariants}>
+                            <CTA title="About Us" icon={ArrowRight} />
+                        </motion.div>
+                    </Link>
                 </motion.div>
 
                 {/* Right Column: Stat Cards */}

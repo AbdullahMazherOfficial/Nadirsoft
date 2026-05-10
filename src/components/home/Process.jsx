@@ -31,7 +31,7 @@ const PROCESS_STEPS = [
 
 function Process() {
     return (
-        <section className="w-full py-24 px-6 bg-slate-50/30 flex justify-center overflow-hidden">
+        <section className="w-full py-24 px-6 bg-white0 flex justify-center overflow-hidden">
             <div className="max-w-7xl w-full flex flex-col gap-16">
 
                 {/* Header - Centered & Professional */}

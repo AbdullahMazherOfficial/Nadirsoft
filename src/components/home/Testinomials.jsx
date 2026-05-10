@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Testimonials() {
     return (
@@ -52,17 +53,19 @@ function Testimonials() {
                     </motion.p>
 
                     {/* Decorative Arrow/CTA Area */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="mt-4"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white group cursor-pointer hover:bg-white hover:text-black transition-all duration-300">
-                            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                        </div>
-                    </motion.div>
+                    <Link href="/coming-soon">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="mt-4"
+                        >
+                            <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white group cursor-pointer hover:bg-white hover:text-black transition-all duration-300">
+                                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </motion.div>
+                    </Link>
                 </div>
 
                 {/* Right Column: Reviews Grid Placeholder */}
@@ -73,7 +76,7 @@ function Testimonials() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="relative min-h-[600px] w-full"
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:-mt-32 lg:mt-0">
                         <Image
                             src='/Videos/cube.gif'
                             alt='gif'

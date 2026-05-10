@@ -105,9 +105,11 @@ function Navbar() {
                 </div>
 
                 {/* Desktop CTA */}
+                <Link href="/contact">
                 <div className="hidden md:block">
                     <CTA title="Start a Project" icon={ArrowRight} />
                 </div>
+                </Link>
 
                 {/* Mobile Toggle */}
                 <button
@@ -142,7 +144,7 @@ function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="absolute top-24 left-4 right-4 bg-slate-900 border border-white/10 rounded-3xl p-6 shadow-2xl md:hidden overflow-hidden"
+                        className="absolute top-24 left-4 right-4 bg-gray-900 border border-white/10 rounded-3xl p-6 shadow-2xl md:hidden overflow-hidden"
                     >
                         {NAV_LINKS.map((link) => (
                             <Link 

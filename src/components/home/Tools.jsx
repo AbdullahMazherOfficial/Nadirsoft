@@ -46,7 +46,7 @@ const badgeVariants = {
 
 function Tools() {
     return (
-        <section className="w-full bg-slate-50/50 py-24 px-6 flex justify-center overflow-hidden">
+        <section className="w-full bg-white py-24 px-6 flex justify-center overflow-hidden">
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
@@ -101,7 +101,7 @@ function Tools() {
                                             initial="initial"
                                             whileHover="hover"
                                             whileTap="tap"
-                                            className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-sm font-semibold text-slate-600 cursor-default"
+                                            className="px-4 py-2 border border-slate-100 rounded-full text-sm font-semibold text-slate-600 cursor-default"
                                         >
                                             {skill}
                                         </motion.span>
