@@ -31,7 +31,8 @@ const PROCESS_STEPS = [
 
 function Process() {
     return (
-        <section className="w-full py-24 px-6 bg-white0 flex justify-center overflow-hidden">
+        /* Section Background: Soft Gray for contrast against white cards */
+        <section className="w-full py-24 px-6 bg-gray-50 flex justify-center overflow-hidden">
             <div className="max-w-7xl w-full flex flex-col gap-16">
 
                 {/* Header - Centered & Professional */}
@@ -43,7 +44,7 @@ function Process() {
                         className="flex items-center gap-2 px-4 py-1.5 border border-purple-100 rounded-full bg-white shadow-sm"
                     >
                         <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
-                        <p className="text-[13px] font-bold text-slate-500 uppercase tracking-[0.2em]">How We Work</p>
+                        <p className="text-[13px] font-bold text-purple-600 uppercase tracking-[0.2em]">How We Work</p>
                     </motion.div>
 
                     <motion.h2
@@ -51,10 +52,10 @@ function Process() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-5xl md:text-6xl font-extrabold text-slate-950 font-sans tracking-tighter"
+                        className="text-5xl md:text-6xl font-extrabold text-black font-sans tracking-tighter"
                     >
                         Our
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-600">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-indigo-600">
                             {" "}Process
                         </span>
                     </motion.h2>
@@ -64,7 +65,7 @@ function Process() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-slate-500 text-lg font-medium font-sans max-w-2xl leading-relaxed"
+                        className="text-gray-600 text-lg font-medium font-sans max-w-2xl leading-relaxed"
                     >
                         A systematic approach to transforming your ideas into high-performing digital realities.
                     </motion.p>
@@ -77,21 +78,21 @@ function Process() {
                             key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            whileHover={{ y: -5, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.05)" }}
+                            whileHover={{ y: -5, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.08)" }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white p-8 rounded-[32px] border border-gray-100 flex flex-col gap-6 transition-all duration-300 group"
+                            className="bg-white p-8 rounded-[32px] border border-gray-200 flex flex-col gap-6 transition-all duration-300 group"
                         >
-                            {/* Number Badge Instead of Icon */}
+                            {/* Number Badge */}
                             <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 font-extrabold text-xl group-hover:bg-purple-600 group-hover:text-white transition-colors duration-500 font-sans">
                                 {index + 1}
                             </div>
 
                             <div className="space-y-3">
-                                <h3 className="text-xl font-bold text-slate-900 font-sans tracking-tight">
+                                <h3 className="text-xl font-bold text-gray-900 font-sans tracking-tight">
                                     {step.title}
                                 </h3>
-                                <p className="text-sm font-medium text-slate-500 font-sans leading-relaxed">
+                                <p className="text-sm font-medium text-gray-500 font-sans leading-relaxed">
                                     {step.desc}
                                 </p>
                             </div>
