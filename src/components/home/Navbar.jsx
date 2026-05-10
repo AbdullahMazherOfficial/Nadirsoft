@@ -7,7 +7,7 @@ import CTA from './CTA';
 import ServicePopup from '../popups/ServicePopup';
 
 const NAV_LINKS = [
-    { name: 'Services', href: '#', hasDropdown: true },
+    { name: 'Services', href: '/coming-soon', hasDropdown: true },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },

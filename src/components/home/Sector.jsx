@@ -57,7 +57,7 @@ const SECTOR_DATA = [
 
 function Sector() {
     return (
-        <section className="w-full py-24 px-6 bg-gray-50/30 flex justify-center overflow-hidden">
+        <section className="w-full py-24 px-6 bg-white flex justify-center overflow-hidden">
             <div className="max-w-7xl w-full flex flex-col gap-16">
 
                 {/* Header - Centered & Professional */}
@@ -69,7 +69,7 @@ function Sector() {
                         className="flex items-center gap-2 px-4 py-1.5 border border-purple-100 rounded-full bg-white shadow-sm"
                     >
                         <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
-                        <p className="text-[13px] font-bold text-slate-500 uppercase tracking-[0.2em]">Industries We Empower</p>
+                        <p className="text-[13px] font-bold text-black/70 uppercase tracking-[0.2em]">Industries We Empower</p>
                     </motion.div>
 
                     <motion.h2
@@ -77,7 +77,7 @@ function Sector() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-5xl md:text-6xl font-extrabold text-slate-950 font-sans tracking-tighter"
+                        className="text-5xl md:text-6xl font-extrabold text-black font-sans tracking-tighter"
                     >
                         Solutions for Every
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-600">
@@ -90,7 +90,7 @@ function Sector() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-slate-500 text-lg font-medium font-sans max-w-2xl leading-relaxed"
+                        className="text-grey text-lg text-black/70 font-medium font-sans max-w-2xl leading-relaxed"
                     >
                         We bridge the gap between complex business challenges and intuitive digital solutions across global market sectors.
                     </motion.p>
@@ -114,10 +114,10 @@ function Sector() {
                             </div>
 
                             <div className="space-y-3">
-                                <h3 className="text-xl font-bold text-slate-900 font-sans tracking-tight">
+                                <h3 className="text-xl font-bold text-black font-sans tracking-tight">
                                     {sector.title}
                                 </h3>
-                                <p className="text-sm font-medium text-slate-500 font-sans leading-relaxed">
+                                <p className="text-sm font-medium text-black/60 font-sans leading-relaxed">
                                     {sector.desc}
                                 </p>
                             </div>

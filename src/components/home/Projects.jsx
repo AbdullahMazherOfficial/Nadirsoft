@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import ProjectCard from '../common/ProjectCard';
+import Link from 'next/link';
 
 const PROJECT_DATA = [
     {
@@ -53,6 +54,7 @@ function Projects() {
                         </h2>
                     </div>
 
+                    <Link href="coming-soon">
                     <motion.button
                         whileHover={{ x: 5 }}
                         className="cursor-pointer flex font-sans items-center gap-2 text-purple-600 font-bold text-sm group"
@@ -60,6 +62,7 @@ function Projects() {
                         View All Work
                         <ArrowUpRight className="transition-transform group-hover:rotate-45" size={16} />
                     </motion.button>
+                    </Link>
                 </div>
 
                 {/* Grid Area */}
