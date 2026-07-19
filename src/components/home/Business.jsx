@@ -13,36 +13,36 @@ import {
 
 const FEATURES = [
   {
-    title: "High-Performance Tech",
-    desc: "From scalable backends to fluid interfaces, we build using modern stacks optimized for speed and reliability.",
+    title: "Fast, Reliable Builds",
+    desc: "From steady backends to smooth interfaces, we build with proven tools chosen for speed and daily reliability.",
     icon: Layers,
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
   },
   {
-    title: "Bespoke Architecture",
-    desc: "We don't do generic. Every line of code is engineered to solve your specific business challenges and goals.",
+    title: "Made to Fit You",
+    desc: "No copy-paste templates here. Every feature is written to solve your specific problems and business goals.",
     icon: Star,
     color: "text-blue-400",
     bg: "bg-blue-500/10",
   },
   {
-    title: "Rapid Deployment",
-    desc: "Our agile workflow ensures constant updates and quick turnaround times without compromising on code quality.",
+    title: "Quick Turnaround",
+    desc: "Our step-by-step workflow means regular updates and fast delivery, without ever cutting corners on quality.",
     icon: Zap,
     color: "text-amber-400",
     bg: "bg-amber-500/10",
   },
   {
-    title: "Security by Design",
-    desc: "We integrate enterprise-grade security from day one, protecting your data and your users' privacy.",
+    title: "Safe From Day One",
+    desc: "We build in strong security from the very first day, keeping your data and your users' details well protected.",
     icon: ShieldCheck,
     color: "text-indigo-400",
     bg: "bg-indigo-500/10",
   },
   {
-    title: "Life-Cycle Support",
-    desc: "We are more than developers; we are partners. We stay with you from the first wireframe to post-launch growth.",
+    title: "Support That Stays",
+    desc: "We're partners, not just coders. We stay with you from the first rough sketch through to life after launch.",
     icon: CheckCircle2,
     color: "text-purple-400",
     bg: "bg-purple-500/10",
@@ -62,6 +62,11 @@ function Business() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  const nextStep = () => {
+    setDirection(1);
+    setIndex((prev) => (prev + 1) % FEATURES.length);
+  };
+
   // Auto-play
   useEffect(() => {
     const timer = setInterval(() => {
@@ -69,11 +74,6 @@ function Business() {
     }, 5000);
     return () => clearInterval(timer);
   }, [index]);
-
-  const nextStep = () => {
-    setDirection(1);
-    setIndex((prev) => (prev + 1) % FEATURES.length);
-  };
 
   const prevStep = () => {
     setDirection(-1);
@@ -118,7 +118,7 @@ function Business() {
 
           <div className="flex flex-col items-start md:items-end gap-6 w-full md:w-auto">
             <p className="text-slate-400 text-base md:text-lg max-w-md text-left md:text-right leading-relaxed">
-              We help companies modernize, innovate, and stay ahead with custom platforms built for the next decade.
+              We help companies grow and stay competitive with custom-built platforms designed to last for years to come.
             </p>
             <div className="flex gap-4">
               <button 

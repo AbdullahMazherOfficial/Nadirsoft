@@ -127,10 +127,10 @@ function About() {
                         className="flex font-sans text-lg flex-col gap-6 text-slate-600 max-w-2xl text-lg font-medium font-sans leading-relaxed"
                     >
                         <p>
-                            Nadir Soft is a full-service digital agency helping businesses build powerful online presences. From sleek websites and mobile apps to intelligent AI automations and results-driven marketing — we cover everything your business needs to grow in the digital era.
+                            Nadir Soft is a full-service digital studio helping businesses build a strong presence online. From clean websites and mobile apps to practical AI automation and honest marketing — we cover everything your business needs to keep growing over time.
                         </p>
                         <p>
-                            We don't just deliver projects — we build long-term partnerships grounded in transparency, performance, and real business outcomes.
+                            We don’t just hand over projects — we build lasting partnerships based on openness, dependable work, and real business results.
                         </p>
                     </motion.div>
 

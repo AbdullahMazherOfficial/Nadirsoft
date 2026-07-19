@@ -30,12 +30,12 @@ const SECTOR_DATA = [
     },
     {
         title: "FinTech & Banking",
-        desc: "Next-gen payment gateways and analytical dashboards with enterprise-grade encryption.",
+        desc: "Dependable payment gateways and clear analytics dashboards, backed by strong bank-level encryption.",
         icon: Wallet,
     },
     {
         title: "Real Estate Tech",
-        desc: "Advanced property ecosystems featuring virtual tours and integrated CRM automation.",
+        desc: "Complete property platforms with virtual tours and built-in tools to manage every enquiry.",
         icon: Building2,
     },
     {
@@ -92,7 +92,7 @@ function Sector() {
                         transition={{ delay: 0.2 }}
                         className="text-grey text-lg text-black/70 font-medium font-sans max-w-2xl leading-relaxed"
                     >
-                        We bridge the gap between complex business challenges and intuitive digital solutions across global market sectors.
+                        We turn complicated business problems into clear, easy-to-use digital tools for companies across every kind of industry.
                     </motion.p>
                 </div>
 

@@ -83,8 +83,8 @@ function ComingSoonPage() {
                         variants={itemVariants}
                         className="text-white/50 text-lg md:text-xl max-w-lg mx-auto leading-relaxed font-medium mb-12"
                     >
-                        We are currently architecting a new digital experience for NadirSoft. 
-                        Our team is working hard to bring you the next level of innovation.
+                        We’re busy building a fresh new digital experience for NadirSoft. 
+                        Our team is hard at work to bring you something genuinely worth the wait.
                     </motion.p>
 
                     {/* --- BACK BUTTON / CTA --- */}

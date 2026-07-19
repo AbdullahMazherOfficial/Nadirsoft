@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { CONTACT } from '@/data/site';
 
 function Whatsapp() {
     const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +25,11 @@ function Whatsapp() {
     return (
         <div>
             {isVisible && (
-                <button   
+                <a
+                    href={CONTACT.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat with us on WhatsApp"
                     style={{
                         backgroundColor: '#25D366',
                         color: '#ffffff',
@@ -44,7 +49,7 @@ function Whatsapp() {
                 >
                     <FaWhatsapp size={30} />
                     
-                </button>
+                </a>
             )}
         </div>
     );

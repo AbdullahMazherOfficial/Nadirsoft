@@ -2,27 +2,28 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, Mail } from 'lucide-react';
+import { CONTACT } from '@/data/site';
 
 const faqs = [
   {
     question: "What specific technologies do you specialize in?",
-    answer: "We specialize in modern full-stack development using React, Next.js, and Node.js. Our AI engineering team focuses on LLM integration, custom automation workflows, and scalable cloud architectures on AWS and Vercel.",
+    answer: "We work mostly with React, Next.js, and Node.js for full-stack builds. Our team also handles AI features like chatbots and custom automations, and we deploy on trusted platforms such as AWS and Vercel to keep things reliable.",
   },
   {
     question: "How do you handle project pricing and timelines?",
-    answer: "Every project is unique. We provide a detailed scope of work with transparent milestones. Typically, MVP developments take 4–8 weeks, while enterprise-grade systems are scoped based on specific modular requirements.",
+    answer: "Every project is different, so we begin with a clear scope and honest milestones. A first working version usually takes four to eight weeks, while larger systems are quoted around the specific set of features you actually need.",
   },
   {
     question: "Do you offer post-launch support and maintenance?",
-    answer: "Yes, we believe in long-term partnerships. We offer various support tiers including 24/7 monitoring, security updates, and iterative feature development to ensure your product scales effectively.",
+    answer: "Yes, we stick around long after launch day. Our support plans cover monitoring, security updates, and steady feature work, so your product keeps running smoothly and grows in step with your business rather than standing still.",
   },
   {
     question: "Can you integrate AI into my existing business workflow?",
-    answer: "Absolutely. We specialize in 'AI-first' refactoring. We audit your current processes to identify bottlenecks and implement custom automations using tools like OpenAI, LangChain, or n8n to boost efficiency.",
+    answer: "Absolutely. We start by mapping your current process to spot the slow, repetitive steps, then add practical automation with tools like OpenAI, LangChain, or n8n so your team can spend far less time on manual busywork.",
   },
   {
     question: "How do we get started with a new project?",
-    answer: "The process starts with a discovery call to understand your vision. Following that, we provide a technical roadmap and a baseline quote. Once approved, we move straight into the design and prototyping phase.",
+    answer: "It begins with a short discovery call so we understand exactly what you're after. From there we share a simple roadmap and a starting quote, and once you are happy with it we move straight into design and prototyping.",
   },
 ];
 
@@ -51,7 +52,7 @@ const FAQsSection = () => {
           </h2>
           <p className="text-slate-400 text-lg font-medium flex items-center gap-2">
             <Mail size={18} className="text-purple-500" />
-            Reach us at <span className="text-white hover:text-purple-400 cursor-pointer transition-colors">info@nadirsoft.com</span>
+            Reach us at <a href={CONTACT.emailHref} className="text-white hover:text-purple-400 cursor-pointer transition-colors">{CONTACT.email}</a>
           </p>
         </div>
 

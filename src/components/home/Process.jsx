@@ -67,7 +67,7 @@ function Process() {
                         transition={{ delay: 0.2 }}
                         className="text-gray-600 text-lg font-medium font-sans max-w-2xl leading-relaxed"
                     >
-                        A systematic approach to transforming your ideas into high-performing digital realities.
+                        A clear, step-by-step way of turning your ideas into digital products that genuinely perform.
                     </motion.p>
                 </div>
 

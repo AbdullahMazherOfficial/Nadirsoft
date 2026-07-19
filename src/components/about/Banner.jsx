@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import {
     User,
     Briefcase,
@@ -76,18 +77,20 @@ function Banner() {
                                     Innovation
                                 </motion.h1>
 
-                                <motion.button
-                                    variants={itemVariants}
-                                    whileHover={{ scale: 1.02 }}
-                                    className="cursor-pointer px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-xl shadow-purple-500/20"
-                                >
-                                    Start a Project <ArrowRight size={20} />
-                                </motion.button>
+                                <Link href="/contact">
+                                    <motion.button
+                                        variants={itemVariants}
+                                        whileHover={{ scale: 1.02 }}
+                                        className="cursor-pointer px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-xl shadow-purple-500/20"
+                                    >
+                                        Start a Project <ArrowRight size={20} />
+                                    </motion.button>
+                                </Link>
                             </div>
 
                             <div className="lg:mt-60 w-full lg:w-auto">
                                 <motion.p variants={itemVariants} className="text-white/50 font-sans text-[15px] max-w-lg leading-relaxed">
-                                    Headquartered in the global tech hub of Dubai, Nadir Soft is a premier software services provider with a truly international mindset. We don't believe in geographic boundaries. Whether you are a startup in New York, an enterprise in London, or a scaling business in Riyadh, our team delivers high-performance solutions designed to compete on a global stage.
+                                    Headquartered in the global tech hub of Dubai, Nadir Soft is a premier software services provider with a truly international mindset. We don’t believe in geographic boundaries. Whether you are a startup in New York, an enterprise in London, or a scaling business in Riyadh, our team delivers high-performance solutions designed to compete on a global stage.
                                 </motion.p>
                             </div>
                         </div>
@@ -105,30 +108,30 @@ function Banner() {
                     >
                         <AboutCard
                             icon={<User size={24} />}
-                            title="Who I Am"
-                            value="Creative Developer"
-                            subText="Building modern web experiences with performance, design, and scalability in mind."
+                            title="Who We Are"
+                            value="A Dubai Studio"
+                            subText="A close-knit team building web, software, and mobile products with care and craft."
                         />
 
                         <AboutCard
                             icon={<Briefcase size={24} />}
                             title="Experience"
-                            value="3+ Years"
-                            subText="Specialized in React, Next.js, React Native, and full-stack application development."
+                            value="6+ Years"
+                            subText="Delivering React, Next.js, React Native, and full-stack projects for clients worldwide."
                         />
 
                         <AboutCard
                             icon={<Code2 size={24} />}
-                            title="What I Do"
+                            title="What We Do"
                             value="Web & Mobile"
-                            subText="Developing responsive websites, mobile apps, dashboards, and secure digital platforms."
+                            subText="Websites, mobile apps, dashboards, and secure platforms tailored to each business."
                         />
 
                         <AboutCard
                             icon={<Globe size={24} />}
-                            title="Work Style"
+                            title="How We Work"
                             value="Remote Friendly"
-                            subText="Focused on communication, clean code, timely delivery, and long-term collaboration."
+                            subText="Clear communication, clean code, on-time delivery, and honest long-term partnerships."
                         />
                     </motion.div>
                 </section>
@@ -147,7 +150,7 @@ function Banner() {
                             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">Our Core <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Philosophy</span></h2>
                             <div className="w-full lg:w-auto">
                                 <p className="text-white/50 font-sans text-[15px] max-w-lg leading-relaxed">
-                                    At NadirSoft, we don't just write code; we solve business problems. Our approach is rooted in the belief that great software is a blend of flawless logic and human-centric design. We don't just deliver projects — we build long-term partnerships grounded in transparency, performance, and real business outcomes.
+                                    At NadirSoft, we don’t just write code; we solve business problems. Our approach is rooted in the belief that great software is a blend of flawless logic and human-centric design. We don’t just deliver projects — we build long-term partnerships grounded in transparency, performance, and real business outcomes.
                                 </p>
                             </div>
                             {/* <div className="h-1 w-20 bg-purple-600 rounded-full" /> */}

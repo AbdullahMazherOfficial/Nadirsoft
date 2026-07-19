@@ -22,7 +22,7 @@ function Testimonials() {
                     >
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500 shadow-[0_0_8px_#a855f7]" />
                         <p className="text-[10px] font-bold text-purple-300 uppercase tracking-[0.2em]">
-                            Success Stories
+                            Blockchain & Web3
                         </p>
                     </motion.div>
 
@@ -34,9 +34,9 @@ function Testimonials() {
                         transition={{ delay: 0.1 }}
                         className="text-5xl md:text-7xl font-extrabold text-white font-sans tracking-tighter leading-[1.1]"
                     >
-                        Trusted by <br />
+                        Built for <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-600">
-                            {" "}Visionaries
+                            {" "}Web3
                         </span>
                     </motion.h2>
 
@@ -48,22 +48,38 @@ function Testimonials() {
                         transition={{ delay: 0.2 }}
                         className="text-slate-400 text-lg font-medium font-sans max-w-md leading-relaxed"
                     >
-                        Real results from industry leaders. Explore how our engineering-first
-                        approach has transformed businesses across the globe.
+                        From self-custody wallets to swaps, on-ramps, and smart contracts,
+                        we build secure blockchain products. Meet NexVault, our crypto wallet.
                     </motion.p>
 
-                    {/* Decorative Arrow/CTA Area */}
-                    <Link href="/coming-soon">
+                    {/* Feature chips */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.25 }}
+                        className="flex flex-wrap gap-2 max-w-md"
+                    >
+                        {["Send", "Receive", "Swap", "Buy Crypto", "History"].map((chip) => (
+                            <span key={chip} className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-300">
+                                {chip}
+                            </span>
+                        ))}
+                    </motion.div>
+
+                    {/* CTA Area */}
+                    <Link href="/projects/crypto-wallet">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
-                            className="mt-4"
+                            className="mt-4 flex items-center gap-3 group cursor-pointer"
                         >
-                            <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white group cursor-pointer hover:bg-white hover:text-black transition-all duration-300">
+                            <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
                                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                             </div>
+                            <span className="text-sm font-bold text-white/80 group-hover:text-white transition-colors">Explore NexVault Wallet</span>
                         </motion.div>
                     </Link>
                 </div>

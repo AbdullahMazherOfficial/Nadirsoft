@@ -72,7 +72,7 @@ function Tools() {
                     </h2>
 
                     <p className="text-slate-500 text-lg font-medium font-sans max-w-xl leading-relaxed">
-                        We use battle-tested, modern technologies to deliver fast, secure, and scalable digital products.
+                        We build with proven, modern technology so your product stays fast, secure, and ready to grow.
                     </p>
                 </motion.div>
 

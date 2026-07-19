@@ -7,7 +7,6 @@ import Projects from "@/components/home/Projects";
 import Sector from "@/components/home/Sector";
 import Testimonials from "@/components/home/Testinomials";
 import Tools from "@/components/home/Tools";
-import Banner from "@/components/home/Banner";
 import Process from "@/components/home/Process";
 
 export default function Home() {

@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import {
     ArrowRight,
     Search,
@@ -27,8 +28,8 @@ const BLOG_CATEGORIES = ["All", "Web3", "Development", "UI/UX", "Mobile"];
 const DUMMY_BLOGS = [
     {
         id: 1,
-        title: "Future of Web3: Stay on Top of Compliance",
-        excerpt: "The world of Web3 is no exception to regulatory compliance. Discover how decentralized tech is adapting...",
+        title: "Web3 and Compliance: What Teams Should Watch",
+        excerpt: "Even decentralised projects have rules to follow. Here's a plain look at how teams keep their Web3 work compliant...",
         category: "Web3",
         date: "Feb 13, 2026",
         readTime: "5 min read",
@@ -36,8 +37,8 @@ const DUMMY_BLOGS = [
     },
     {
         id: 2,
-        title: "Why Next.js is the Ultimate Solution for SaaS",
-        excerpt: "As the terrain of web development changes at lightning speed, scalability and performance are the new gold standard...",
+        title: "Why We Reach for Next.js on Most SaaS Builds",
+        excerpt: "Web tools move fast, and speed and scale matter more than ever. Here's why Next.js keeps earning a place in our stack...",
         category: "Development",
         date: "Feb 10, 2026",
         readTime: "8 min read",
@@ -45,8 +46,8 @@ const DUMMY_BLOGS = [
     },
     {
         id: 3,
-        title: "Powering Secure and Scalable Mobile Apps",
-        excerpt: "As the digital economy evolves, one truth becomes clear: trust and security are the foundations of success...",
+        title: "Building Mobile Apps People Actually Trust",
+        excerpt: "As more of daily life moves to phones, one thing holds true: people stay with apps that feel safe and dependable...",
         category: "Mobile",
         date: "Jan 28, 2026",
         readTime: "6 min read",
@@ -95,6 +96,7 @@ function Blogs() {
 
                                 <motion.button
                                     variants={itemVariants}
+                                    onClick={() => document.getElementById('blog-grid')?.scrollIntoView({ behavior: 'smooth' })}
                                     whileHover={{ scale: 1.02 }}
                                     className="cursor-pointer px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-xl shadow-purple-500/20"
                                 >
@@ -104,7 +106,7 @@ function Blogs() {
 
                             <div className="lg:mt-60 w-full lg:w-auto">
                                 <motion.p variants={itemVariants} className="text-white/50 font-sans text-[15px] max-w-lg leading-relaxed">
-                                    Explore articles on modern web development, UI/UX trends, scalable applications, mobile experiences, performance optimization, and the evolving world of technology. Discover practical insights, development strategies, and creative solutions crafted from real-world experience.
+                                    Read articles on web development, design, building reliable apps, mobile work, speeding up sites, and where technology is heading next. Honest, practical notes and ideas drawn straight from the projects our team works on every single day.
                                 </motion.p>
                             </div>
                         </div>
@@ -112,7 +114,7 @@ function Blogs() {
                 </section>
 
                 {/* --- BLOG GRID SECTION --- */}
-                <section className="pb-32 lg:px-32 md:px-12 px-6">
+                <section id="blog-grid" className="pb-32 lg:px-32 md:px-12 px-6">
                     <div className="max-w-[1350px] mx-auto">
 
                         {/* Search & Filters */}
@@ -207,9 +209,9 @@ function BlogCard({ blog }) {
                 </p>
 
                 <div className="mt-auto">
-                    <button className="flex items-center gap-2 text-sm font-bold text-white group-hover:gap-4 transition-all">
+                    <Link href="/coming-soon" className="flex items-center gap-2 text-sm font-bold text-white group-hover:gap-4 transition-all">
                         Read More <ArrowRight size={16} className="text-purple-500" />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </motion.div>

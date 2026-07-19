@@ -4,30 +4,13 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import ProjectCard from '../common/ProjectCard';
 import Link from 'next/link';
+import { PROJECTS } from '@/data/projects';
 
-const PROJECT_DATA = [
-    {
-        title: "Nexora ERP",
-        subtitle: "Software Development",
-        description: "Streamlined operational overhead by 40% through custom automated resource planning.",
-        backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-        tech: ["ERP System", "Custom Software"]
-    },
-    {
-        title: "ShopSprint",
-        subtitle: "Website Development",
-        description: "E-commerce revenue increased by 65% in the first quarter post-launch.",
-        backgroundImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2370&auto=format&fit=crop",
-        tech: ["E-Commerce", "Next.js", "Stripe"]
-    },
-    {
-        title: "Clarise App",
-        subtitle: "App Development",
-        description: "Achieved 10k+ downloads in the first 30 days of release on iOS and Android.",
-        backgroundImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2370&auto=format&fit=crop",
-        tech: ["iOS & Android", "React Native"]
-    }
-];
+// Show three projects on the home page. The crypto project is excluded here
+// because it is already featured as our main product in the blockchain section.
+const PROJECT_DATA = PROJECTS
+    .filter((project) => project.slug !== "aether-nexus-finance")
+    .slice(0, 3);
 
 function Projects() {
     return (
@@ -54,7 +37,7 @@ function Projects() {
                         </h2>
                     </div>
 
-                    <Link href="coming-soon">
+                    <Link href="/projects">
                     <motion.button
                         whileHover={{ x: 5 }}
                         className="cursor-pointer flex font-sans items-center gap-2 text-purple-600 font-bold text-sm group"
@@ -74,7 +57,9 @@ function Projects() {
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     {PROJECT_DATA.map((project, index) => (
-                        <ProjectCard key={index} {...project} />
+                        <Link key={index} href={`/projects/${project.slug}`}>
+                            <ProjectCard {...project} backgroundImage={project.image} />
+                        </Link>
                     ))}
                 </motion.div>
             </div>
